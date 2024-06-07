@@ -35,4 +35,19 @@
    StringDB_interactions.csv --> Protein - Protein interaction network  obtained from String PPI with confidence score >=400
 
 13. StringDB proteins
-   StringDB_protein_info.csv --> Protein along with metadata information for all proteins available via StringDB and present in the interaction network (#string_protein_id | preferred_name | protein_size | annotation
+   StringDB_protein_info.csv --> Protein along with metadata information for all proteins available via StringDB and present in the interaction network (#string_protein_id | preferred_name | protein_size )
+
+14. Alphafold uniprot ids
+   AlphaFold_UniProtIDs.csv --> Uniprot ids of proteins with structure predicted by AlphaFold2.
+
+15.AlphaFold UnitProtKB
+   Curated_AlphaFold_UniProtKB.csv -->  Uniprot id, gene name, details ...
+
+16. subset StringDB interactions
+   subset_StringDB_interactions.csv --> Protein -  Protein interaction network of genes which have a mapped UniProtId in AlphaFold Database
+
+17. subset String proteins
+   subset_String_protein_info.csv --> Protein along with metadata information for all proteins available via StringDB and mapped to UniProtId in Alphafold Database and present in the interaction network (#string_protein_id | preferred_name | protein_size)
+
+18. Filtered Alphafold Database
+   Filtered_AlphaFold_UniProtKB.csv --> Uniprot Ids of proteins in AlphaFold Database matching with at least one gene in StringDB.

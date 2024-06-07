@@ -1,7 +1,7 @@
 library(data.table)
 library(ggplot2)
 
-setwd("/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/")
+setwd("/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/scripts/")
 
 convert_to_listed_df <- function(df, column="", rename_column="")
 {
@@ -47,12 +47,12 @@ convert_to_listed_df <- function(df, column="", rename_column="")
 
 #Get the drugbank dataset with information with atleast one transporter, target or enzyme (human / non-human)
 ################################################################################
-drug_basic_df <- fread("Data/drugs.csv",header=T)
+drug_basic_df <- fread("../Data/drugs.csv",header=T)
 drug_basic_df <- as.data.frame(drug_basic_df)
 
 #Get the drugbank dataset with calculated properties
 ################################################################################
-drug_smiles_df <- fread("Data/smiles.csv",header=T)
+drug_smiles_df <- fread("../Data/smiles.csv",header=T)
 drug_smiles_df <- as.data.frame(drug_smiles_df)
 
 #Perform inner join and keep those drugs whose SMILES are available and they have one target (human / non-human)
@@ -61,16 +61,16 @@ rev_drug_drugs_df <- merge(x = drug_smiles_df, y =  drug_basic_df, by = "drug_id
 
 #Get drugs interaction with human protein targets, transporters and enzymes
 ################################################################################
-drug_target_df <- fread("Data/drug2target_human.csv",header=T)
+drug_target_df <- fread("../Data/drug2target_human.csv",header=T)
 drug_target_df <- as.data.frame(drug_target_df)
 drug_target_df$target_type <- "protein"
 rev_drug_target_df <- drug_target_df[,c(1,2,3,6,4,7)]
 colnames(rev_drug_target_df) <- c("drug_id","partner_id","gene_name","inducer","inhibitor","target_type")
-drug_enzyme_df <- fread("Data/drug2enzyme_human.csv",header=T)
+drug_enzyme_df <- fread("../Data/drug2enzyme_human.csv",header=T)
 drug_enzyme_df <- as.data.frame(drug_enzyme_df)
 drug_enzyme_df$target_type <- "enzyme"
 rev_drug_enzyme_df <- drug_enzyme_df[,c(1,2,3,5,6,7)]
-drug_transporter_df <- fread("Data/drug2transporter_human.csv",header=T)
+drug_transporter_df <- fread("../Data/drug2transporter_human.csv",header=T)
 drug_transporter_df <- as.data.frame(drug_transporter_df)
 drug_transporter_df$target_type <- "transporter"
 rev_drug_transporter_df <- drug_transporter_df[,c(1,2,3,5,6,7)]
@@ -96,4 +96,4 @@ colnames(drug_drug_protein_interaction_df) <- c("drug_id","collated_partner_id",
 #Merge the drugbank information with drugbank protein interaction information
 big_drug_data_df <- merge(x=rev_drug_drugs_df, y = drug_drug_protein_interaction_df)
 print(dim(big_drug_data_df))
-write.table(big_drug_data_df, file="Data/drug_protein_interactions.csv",row.names=F, col.names=T, quote=F, sep=" | ")
+write.table(big_drug_data_df, file="../Data/drug_protein_interactions.csv",row.names=F, col.names=T, quote=F, sep=" | ")

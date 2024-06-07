@@ -13,7 +13,7 @@ if is_python3:
     unicode = str
 
 # Parse XML
-data = open("../../Data/drug_Full_DB.xml","r")
+data = open("../../General_Data/drug_Full_DB.xml","r")
 xml_content = data.read().encode()
 root = etree.XML(xml_content)
 

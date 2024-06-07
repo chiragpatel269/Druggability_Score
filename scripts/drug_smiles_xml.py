@@ -18,7 +18,7 @@ import numpy as np
 import os
 
 #takes couple of minutes
-filename="../../Data/drug_Full_DB.xml" # DrugBank Version 6
+filename="../../General_Data/drug_Full_DB.xml" # DrugBank Version 6
 obj=untangle.parse(filename)
 
 #Data Frame of Small Molecule Type Drugs
