@@ -51,3 +51,6 @@
 
 18. Filtered Alphafold Database
    Filtered_AlphaFold_UniProtKB.csv --> Uniprot Ids of proteins in AlphaFold Database matching with at least one gene in StringDB.
+
+19. StringDB genes AlphaFold Mapping
+   StringDB_genes_AlphaFold_mapping.csv --> StringDB genes and their mapping to AlphaFold Database Uniprot Ids.

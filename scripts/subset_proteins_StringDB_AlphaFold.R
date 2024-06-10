@@ -66,6 +66,7 @@ matched_gene_alphafold_uniprot_df <- as.data.frame(matched_gene_alphafold_unipro
 colnames(matched_gene_alphafold_uniprot_df) <- c("StringDB_Gene_Name","AlphaFold_Uniprot_Id","Uniprot_Protein_Length")
 matched_gene_alphafold_uniprot_df$Uniprot_Protein_Length <- as.numeric(as.vector(matched_gene_alphafold_uniprot_df$Uniprot_Protein_Length))
 matched_gene_alphafold_uniprot_df <- matched_gene_alphafold_uniprot_df[order(matched_gene_alphafold_uniprot_df$StringDB_Gene_Name,matched_gene_alphafold_uniprot_df$Uniprot_Protein_Length,decreasing=T),]
+write.table(matched_gene_alphafold_uniprot_df, "../Data/StringDB_genes_AlphaFold_Mapping.csv",row.names=F, col.names=T, quote=F, sep="\t")
 
 #Filter the Alphafold proteins to those which map to atleast one gene name
 ################################################################################
@@ -74,11 +75,11 @@ filtered_alphafold_df <- alphafold_df[alphafold_df$UniProtId %in% unique_alphafo
 write.table(filtered_alphafold_df, file="../Data/Filtered_AlphaFold_UniProtKB.csv",row.names=F, col.names=T, quote=F, sep=",")
 
 #Find the subset of human genes with at least one uniprot id
-subset_stringdb_protein_info_df <- stringdb_protein_info_df[stringdb_protein_info_df$preferred_name %in% subset_mapping_df$gene_name_stringdb,]
+subset_stringdb_protein_info_df <- stringdb_protein_info_df[stringdb_protein_info_df$preferred_name %in% matched_gene_alphafold_uniprot_df$StringDB_Gene_Name,]
 write.table(subset_stringdb_protein_info_df,file = "../Data/subset_StringDB_protein_info.csv", row.names=F, col.names=T, quote=F, sep=" | ")
 
 #Read the stringdb interactions and keep it to the subset of genes with one uniprot id
 stringdb_ppi_df <- fread("../Data/StringDB_interactions.csv")
 stringdb_ppi_df <- as.data.frame(stringdb_ppi_df)
-subset_stringdb_ppi_df <- stringdb_ppi_df[stringdb_ppi_df$gene1 %in% subset_stringdb_protein_info_df$preferred_name & stringdb_ppi_df$gene2 %in% subset_stringdb_protein_info_df$preferred_name,]
+subset_stringdb_ppi_df <- stringdb_ppi_df[stringdb_ppi_df$gene1 %in% matched_gene_alphafold_uniprot_df$StringDB_Gene_Name & stringdb_ppi_df$gene2 %in% matched_gene_alphafold_uniprot_df$StringDB_Gene_Name,]
 write.table(subset_stringdb_ppi_df, file="../Data/subset_StringDB_interactions.csv",row.names=F, col.names=T, quote=F, sep=",")
