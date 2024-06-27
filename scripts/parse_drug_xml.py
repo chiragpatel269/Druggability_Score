@@ -18,8 +18,8 @@ xml_content = data.read().encode()
 root = etree.XML(xml_content)
 
 print(len(root),'drugs')
-# -
 
+# +
 # ## Iterate over drugs
 # +
 drug2attrib = defaultdict(dict)
@@ -217,8 +217,8 @@ for child in root:
          'transporters:', len(drug2attrib[drug_id]['transporters']))
 #    print('\n')
 
-# -
 
+# +
 # ## List of drugs to save (as long as num_targets + num_enzymes + num_transporters != 0)
 # +
 drugs = []
@@ -231,8 +231,8 @@ for drug_id in sorted(drug2attrib.keys()):
 print(len(drug2attrib), "drugs parsed from XML")
 print(len(drugs), "drugs with at least 1 target/ enzyme/ transporter present")
 
-# -
 
+# +
 # ## Save drug attributes to CSV {'drugname', 'SMILES', 'drug_type', 'groups', 'targets/enzymes/transporters': [_id, _actions]}
 # +
 outf = open('../Data/drugs.csv', 'w')

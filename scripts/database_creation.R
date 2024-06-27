@@ -96,4 +96,4 @@ colnames(drug_drug_protein_interaction_df) <- c("drug_id","collated_partner_id",
 #Merge the drugbank information with drugbank protein interaction information
 big_drug_data_df <- merge(x=rev_drug_drugs_df, y = drug_drug_protein_interaction_df)
 print(dim(big_drug_data_df))
-write.table(big_drug_data_df, file="../Data/drug_protein_interactions.csv",row.names=F, col.names=T, quote=F, sep=" | ")
+write.table(big_drug_data_df, file="../Data/drug_protein_interactions.csv",row.names=F, col.names=T, quote=F, sep="|")

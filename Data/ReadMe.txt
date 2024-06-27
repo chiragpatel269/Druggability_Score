@@ -54,3 +54,9 @@
 
 19. StringDB genes AlphaFold Mapping
    StringDB_genes_AlphaFold_mapping.csv --> StringDB genes and their mapping to AlphaFold Database Uniprot Ids.
+
+20. drug sdfs
+    drug_sdfs --> Folder contains 3d structure of all drugs in dataset generated using RDKit.
+
+21. Protein Fasta
+    UP000005640_9606.fasta --> Fasta file containing protein sequence of all AlphaFold Database proteins
