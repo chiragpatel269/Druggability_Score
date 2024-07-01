@@ -52,11 +52,17 @@
 18. Filtered Alphafold Database
    Filtered_AlphaFold_UniProtKB.csv --> Uniprot Ids of proteins in AlphaFold Database matching with at least one gene in StringDB.
 
-19. StringDB genes AlphaFold Mapping
+19. Filtered AlphaFold Database with Sequence
+   Filtered_AlphaFold_UniProtKB_with_Sequence.csv --> Uniprot Ids of proteins in AlphaFold Database with their AA sequence
+
+20. Filtered AlphaFold Database with Duplicate Sequence
+   Filtered_AlphaFold_UniProtKB_with_Duplicate_Sequence.csv --> Uniprot information of proteins with the same AA sequence
+
+20. StringDB genes AlphaFold Mapping
    StringDB_genes_AlphaFold_mapping.csv --> StringDB genes and their mapping to AlphaFold Database Uniprot Ids.
 
-20. drug sdfs
+21. drug sdfs
     drug_sdfs --> Folder contains 3d structure of all drugs in dataset generated using RDKit.
 
-21. Protein Fasta
+22. Protein Fasta
     UP000005640_9606.fasta --> Fasta file containing protein sequence of all AlphaFold Database proteins

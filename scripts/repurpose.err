@@ -1,0 +1,5 @@
+nohup: ignoring input
+[08:43:47] Explicit valence for atom # 13 Cl, 5, is greater than permitted
+[08:43:50] Explicit valence for atom # 6 Be, 4, is greater than permitted
+[08:43:50] Unusual charge on atom 0 number of radical electrons set to zero
+[08:43:55] Explicit valence for atom # 13 Be, 3, is greater than permitted
