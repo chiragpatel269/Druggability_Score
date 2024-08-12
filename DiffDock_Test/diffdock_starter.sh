@@ -1,0 +1,1 @@
+sudo docker run -v /home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data:/data/input -v /home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/results:/data/output   --rm -it --gpus=all -it --entrypoint /bin/bash rbgcsail/diffdock 
