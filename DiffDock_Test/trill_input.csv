@@ -1,9 +1,0 @@
-complex_name,protein_path,ligand_description,protein_sequence
-STAT3_DB00006,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/STAT3.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00006.sdf,
-STAT3_DB00007,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/STAT3.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00007.sdf,
-STAT3_DB00014,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/STAT3.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00014.sdf,
-STAT3_DB00035,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/STAT3.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00035.sdf,
-ZBP1_DB00006,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/ZBP1.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00006.sdf,
-ZBP1_DB00007,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/ZBP1.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00007.sdf,
-ZBP1_DB00014,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/ZBP1.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00014.sdf,
-ZBP1_DB00035,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/DiffDock_Test/data/human_pdbs/ZBP1.pdb,/home/Raghvendra.Mall/TII/Projects/Raghav/CAR-T/Druggability_Score/Data/drug_sdfs/mol_DB00035.sdf,

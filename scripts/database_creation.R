@@ -52,7 +52,7 @@ drug_basic_df <- as.data.frame(drug_basic_df)
 
 #Get the drugbank dataset with calculated properties
 ################################################################################
-drug_smiles_df <- fread("../Data/smiles.csv",header=T)
+drug_smiles_df <- fread("../Data/smiles.csv",header=T,sep="$")
 drug_smiles_df <- as.data.frame(drug_smiles_df)
 
 #Perform inner join and keep those drugs whose SMILES are available and they have one target (human / non-human)
